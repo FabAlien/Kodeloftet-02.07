@@ -1,8 +1,16 @@
+/* Variables */
+
+* {
+  --primaryColour: red;
+  --defaultFont: "JetBrains Mono";
+  --defaultHeight: 90vh;
+}
+
 /* Global */
 
 * {
   box-sizing: border-box;
-  font-family: 'JetBrains Mono';
+  font-family: var(--defaultFont);
 }
 
 body {
@@ -22,7 +30,7 @@ ul {
 }
 
 main {
-  min-height: 100vh;
+  min-height: var(--defaultHeight);
 }
 
 footer {
@@ -36,7 +44,7 @@ footer > p {
 }
 
 section {
-  min-height: 50vh;
+  min-height: calc(var(--defaultHeight) / 2);
 }
 
 /* non-Global */
@@ -57,10 +65,4 @@ section {
 .flexBetween {
   display: flex;
   justify-content: space-between;
-}
-
-/* Variables */
-
-* {
-  --primaryColour: red;
 }
